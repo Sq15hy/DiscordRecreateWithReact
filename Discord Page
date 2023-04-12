@@ -1,0 +1,373 @@
+import React, { Component } from 'react';
+import { AppRegistry, Text, View, StyleSheet, TouchableHighlight, Image, ImageBackground, Alert, Dimensions, TextInput } from 'react-native';
+import Constants from 'expo-constants';
+
+let deviceHeight = Dimensions.get('window').height;
+let deviceWidth = Dimensions.get('window').width;
+
+export default class App extends Component {
+    state = {
+        inputValue: 'message #chat'
+    };
+
+    _handleTextChange = inputValue => {
+        this.setState({ inputValue });
+    };
+
+    render() {
+        return (
+            <View style={styles.container}>
+                <View style={styles.topBar}>
+                    
+                    <TouchableHighlight
+                        onPress={() => {
+                            alert('Menu Screen pops up')
+                        }}
+                    >
+                    <Image
+                        source={{ uri: 'https://codehs.com/uploads/52a820b9bfedae11d2eeb54e70334682' }}
+                        style={{ height: deviceHeight/17, width: deviceHeight/17, marginRight: deviceHeight/20, marginLeft: deviceHeight/35 }}
+                    />
+                    </TouchableHighlight>
+                    
+                    <Text style={styles.hashTag}>
+                        #
+                    </Text>
+                    <Text style={styles.title}>
+                        chat
+                    </Text>
+                    
+                    <TouchableHighlight
+                        onPress={() => {
+                            alert('Search pops up')
+                        }}
+                    >
+                    <Image
+                        source={{ uri: 'https://codehs.com/uploads/3c89a08a25074917d1df653627804f40' }}
+                        style={{ height: deviceHeight/17, width: deviceHeight/17, marginRight: deviceHeight/20, }}
+                    />
+                    </TouchableHighlight>
+                    
+                    <TouchableHighlight
+                        onPress={() => {
+                            alert('Friends / members pops up')
+                        }}
+                    >
+                    <Image
+                        source={{ uri: 'https://codehs.com/uploads/b90bf79d2872d6077f6241bc49097025' }}
+                        style={{ height: deviceHeight/17, width: deviceHeight/17 }}
+                    />
+                    </TouchableHighlight>
+                    
+                </View>
+                
+                <View style={styles.middleBar}>
+                
+                    <Image
+                        source={{ uri: 'https://codehs.com/uploads/bfbff14b97bb3fb5e57eccf1d514a3dd' }}
+                        style={{ height: 10*deviceHeight/105, width: 10*deviceHeight/105, margin: deviceHeight/80,  }}
+                    />
+                    <View style={styles.middleBarP1}>
+            
+                        <View style={styles.middleBarP2}>
+                            <Text style={styles.nameText}>
+                                Sq15hy
+                            </Text>
+                            <Text style={styles.dateText}>
+                                today at 3:20 pm
+                            </Text>
+                        </View>
+                        <View style={styles.middleBarP3}>
+                            <Text style={styles.bodyText}>
+                                meow meow meow meow meow meow meow meow meow meow meow meow 
+                            </Text>
+                        </View>
+                    </View>
+                    
+                </View>
+                
+                <View style={styles.middleBar}>
+                
+                    <Image
+                        source={{ uri: 'https://codehs.com/uploads/34642f2c9854a9b59015e1d176f90efe' }}
+                        style={{ height: 10*deviceHeight/105, width: 10*deviceHeight/105, margin: deviceHeight/80,  }}
+                    />
+                    <View style={styles.middleBarP1}>
+            
+                        <View style={styles.middleBarP2}>
+                            <Text style={styles.nameText}>
+                                Thien
+                            </Text>
+                            <Text style={styles.dateText}>
+                                today at 3:21 pm
+                            </Text>
+                        </View>
+                        <View style={styles.middleBarP3}>
+                            <Text style={styles.bodyText}>
+                                bark bark bark bark bark bark bark bark bark bark bark
+                            </Text>
+                        </View>
+                    </View>
+                    
+                </View>
+                
+                <View style={styles.middleBar}>
+                
+                    <Image
+                        source={{ uri: 'https://codehs.com/uploads/bfbff14b97bb3fb5e57eccf1d514a3dd' }}
+                        style={{ height: 10*deviceHeight/105, width: 10*deviceHeight/105, margin: deviceHeight/80,  }}
+                    />
+                    <View style={styles.middleBarP1}>
+            
+                        <View style={styles.middleBarP2}>
+                            <Text style={styles.nameText}>
+                                Sq15hy
+                            </Text>
+                            <Text style={styles.dateText}>
+                                today at 3:22 pm
+                            </Text>
+                        </View>
+                        <View style={styles.middleBarP3}>
+                            <Text style={styles.bodyText}>
+                                MAD II project gonna be fire 
+                            </Text>
+                        </View>
+                    </View>
+                    
+                </View>
+                
+                <View style={styles.middleBar}>
+                
+                    <Image
+                        source={{ uri: 'https://codehs.com/uploads/34642f2c9854a9b59015e1d176f90efe' }}
+                        style={{ height: 10*deviceHeight/105, width: 10*deviceHeight/105, margin: deviceHeight/80,  }}
+                    />
+                    <View style={styles.middleBarP1}>
+            
+                        <View style={styles.middleBarP2}>
+                            <Text style={styles.nameText}>
+                                Thien
+                            </Text>
+                            <Text style={styles.dateText}>
+                                today at 3:50 pm
+                            </Text>
+                        </View>
+                        <View style={styles.middleBarP3}>
+                            <Text style={styles.bodyText}>
+                                im lame and just doing the an iphone screen
+                            </Text>
+                        </View>
+                    </View>
+                    
+                </View>
+                
+                <View style={styles.middleBar}>
+                
+                    <Image
+                        source={{ uri: 'https://codehs.com/uploads/bfbff14b97bb3fb5e57eccf1d514a3dd' }}
+                        style={{ height: 10*deviceHeight/105, width: 10*deviceHeight/105, margin: deviceHeight/80,  }}
+                    />
+                    <View style={styles.middleBarP1}>
+            
+                        <View style={styles.middleBarP2}>
+                            <Text style={styles.nameText}>
+                                Sq15hy
+                            </Text>
+                            <Text style={styles.dateText}>
+                                today at 4:00 pm
+                            </Text>
+                        </View>
+                        <View style={styles.middleBarP3}>
+                            <Text style={styles.bodyText}>
+                                wack bro you suck
+                            </Text>
+                        </View>
+                    </View>
+                    
+                </View>
+                
+                <View style={styles.middleBar}>
+                
+                    <Image
+                        source={{ uri: 'https://codehs.com/uploads/34642f2c9854a9b59015e1d176f90efe' }}
+                        style={{ height: 10*deviceHeight/105, width: 10*deviceHeight/105, margin: deviceHeight/80,  }}
+                    />
+                    <View style={styles.middleBarP1}>
+            
+                        <View style={styles.middleBarP2}>
+                            <Text style={styles.nameText}>
+                                Thien
+                            </Text>
+                            <Text style={styles.dateText}>
+                                today at 4:20 pm
+                            </Text>
+                        </View>
+                        <View style={styles.middleBarP3}>
+                            <Text style={styles.bodyText}>
+                                shut up I bet yours isnt going to be any better
+                            </Text>
+                        </View>
+                    </View>
+                    
+                </View>
+                
+                <View style={styles.middleBar}>
+                
+                    <Image
+                        source={{ uri: 'https://codehs.com/uploads/bfbff14b97bb3fb5e57eccf1d514a3dd' }}
+                        style={{ height: 10*deviceHeight/105, width: 10*deviceHeight/105, margin: deviceHeight/80,  }}
+                    />
+                    <View style={styles.middleBarP1}>
+            
+                        <View style={styles.middleBarP2}>
+                            <Text style={styles.nameText}>
+                                Sq15hy
+                            </Text>
+                            <Text style={styles.dateText}>
+                                today at 4:30 pm
+                            </Text>
+                        </View>
+                        <View style={styles.middleBarP3}>
+                            <Text style={styles.bodyText}>
+                                oh it totally is, I worked on it outside of cause im cool like that
+                            </Text>
+                        </View>
+                    </View>
+                    
+                </View>
+                
+                <View style={styles.bottomBar}>
+                
+                    
+                    <TouchableHighlight
+                        onPress={() => {
+                            alert('Insert images')
+                        }}
+                    >
+                    <Image
+                        source={{ uri: 'https://codehs.com/uploads/2c7f7fb82cd3fe78d9f68ff0bd21ea55' }}
+                        style={{ height: deviceHeight/9, width: deviceHeight/9 }}
+                    />
+                    </TouchableHighlight>
+                    
+                    <View style={styles.bottomBar2}>
+                        <Text style={styles.messageText}>
+                                
+                            <TextInput
+                                value={this.state.inputValue}
+                                onChangeText={this._handleTextChange}
+                                style={styles.messageText2}
+                            />
+                        </Text>
+                    </View>
+                    
+                    <TouchableHighlight
+                        onPress={() => {
+                            alert('server emojis pop up')
+                        }}
+                    >
+                    <Image
+                        source={{ uri: 'https://codehs.com/uploads/3090ed5ec39441bfd9c1d78735ba6b1e' }}
+                        style={{ height: deviceHeight/10, width: deviceHeight/10 }}
+                    />
+                    </TouchableHighlight>
+                </View>
+            </View>
+        );
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        height: deviceHeight,
+        width: deviceWidth,
+        backgroundColor: "#36393f"
+    },
+    topBar: {
+        height: deviceHeight/9,
+        width: deviceWidth,
+        backgroundColor: "#2f3136",
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    middleBar: {
+        height: deviceHeight/9,
+        width: deviceWidth,
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    middleBarP1: {
+        height: deviceHeight/9,
+        width: 95*deviceWidth/105,
+        flexDirection: 'column',
+    },
+    middleBarP2: {
+        flex: 1.5,
+        alignItems: "center",
+        flexDirection: "row"
+    },
+    middleBarP3: {
+        flex: 2,
+        width: 85*deviceWidth/105,
+    },
+    nameText: {
+        color: "#bcbcbe",
+        fontSize: deviceHeight/28,
+        fontStyle: "Uni Sans",
+        fontWeight: 'bold',
+        margin: 3,
+        marginRight: deviceWidth/20,
+    },
+    dateText: {
+        color: "#6d7178",
+        fontSize: deviceHeight/45,
+        fontStyle: "Uni Sans",
+        fontWeight: 'bold',
+        margin: 3,
+    },
+    bodyText: {
+        color: '#d0d5db',
+        fontSize: deviceHeight/45,
+        fontStyle: "Uni Sans",
+        margin: 3,
+    },
+    messageText: {
+        color: '#d0d5db',
+        fontSize: deviceHeight/40,
+        fontStyle: "Uni Sans",
+        margin: 3,
+        marginLeft: deviceHeight/40,
+    },
+    messageText2: {
+        color: '#d0d5db',
+        fontSize: deviceHeight/40,
+        fontStyle: "Uni Sans",
+    },
+    hashTag: {
+        color: "#62666c",
+        fontSize: deviceHeight/17,
+        fontStyle: "Uni Sans",
+        marginRight: deviceHeight/45,
+    },
+    title: {
+        color: "#b8b9bb",
+        fontSize: deviceHeight/23,
+        fontStyle: "Uni-Sans",
+        marginRight: deviceHeight/11,
+    },
+    bottomBar: {
+        height: deviceHeight/9,
+        width: deviceWidth,
+        backgroundColor: "#2f3136",
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    bottomBar2: {
+        height: deviceHeight/12,
+        width: 5.9*deviceWidth/9,
+        backgroundColor: "#36393f",
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderRadius: 100,
+    },
+});
